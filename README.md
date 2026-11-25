@@ -23,17 +23,18 @@ A machine learning and natural language processing (NLP) web application built w
 
 ## 📂 Project Structure
 ```text
-├── data/
-│   └── cleaned_data.csv        # Preprocessed dataset
+Fake_News_Prediction/
+├── data/                        # Raw and cleaned news datasets
 ├── model/
-│   ├── model.pkl               # Trained ML classifier
-│   └── vectorizer.pkl          # Fitted TF-IDF vectorizer
+│   ├── model.pkl                # Trained ML classifier (added after training)
+│   └── vectorizer.pkl           # Fitted TF-IDF vectorizer
 ├── static/
-│   └── style.css               # Frontend styling
+│   └── style.css                # Frontend styling
 ├── templates/
-│   └── index.html              # Web UI template
-├── utils.py                    # Shared NLP text preprocessing pipeline
-├── train.py                    # Model training & evaluation script
-├── app.py                      # Flask backend & prediction routes
-├── requirements.txt            # Python dependencies
-└── README.md
+│   └── index.html               # Web UI template
+├── dataset_preparation.py       # Dataset loading, merging, and label encoding
+├── text_preprocessing.py        # NLP text cleaning and normalization pipeline
+├── feature_extraction.py        # TF-IDF vectorization and feature saving
+├── app.py                       # Flask backend and /predict routes
+├── requirements.txt             # Python dependencies
+└── README.md                    # Project documentation
